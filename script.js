@@ -6,6 +6,7 @@ range.oninput = function () {
   input = range.value;
   result.innerHTML = range.value;
   box.style.left = `${range.value}%`;
+  box.style.borderRadius = `${range.value}%`;
 
   if (range.value == 20) {
     box.style.backgroundColor = "#007bff";
@@ -13,7 +14,7 @@ range.oninput = function () {
     box.style.backgroundColor = "#dc3644";
   } else if (range.value == 0) {
     box.style.backgroundColor = "#6c757d";
-  } else if (range.value == 80) {
+  } else if (range.value > 80) {
     box.style.left = `80%`;
   }
 };
